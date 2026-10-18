@@ -1,0 +1,20 @@
+# Maven build output
+target/
+
+# Allure: локальний CLI і результати поза target/
+.allure/
+allure-results/
+allure-report/
+allure-2.*/
+
+# Selenide screenshots and page sources on failure
+build/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
