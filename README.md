@@ -48,6 +48,35 @@ UI-дії й локатори — лише в Page Objects (`@Step` для Allur
 - Google Chrome (Selenide використовує його за замовчуванням)
 - Allure 2.29 (звіти: кроки `@Step`, скріншоти при падінні)
 
+## Встановлення на іншій машині
+
+Репозиторій: [github.com/lesterss/rozetka-java-test](https://github.com/lesterss/rozetka-java-test)
+
+### Що має бути встановлено
+
+- Git
+- JDK 17+ (`java -version`)
+- Maven 3.9+ і щоб команда `mvn` була в PATH (`mvn -version`)
+- Google Chrome (Selenide використовує його за замовчуванням)
+
+Папки `target/`, `build/`, `.allure/` з іншої машини копіювати не потрібно — вони з’являться після збірки/запуску.
+
+### Клонування і перша збірка
+
+```powershell
+git clone https://github.com/lesterss/rozetka-java-test.git
+cd rozetka-java-test
+
+# перевірити інструменти
+java -version
+mvn -version
+
+# підтягнути залежності й скомпілювати тести
+mvn test-compile
+```
+
+Далі — розділ [Запуск](#запуск). У Cursor / VS Code / IntelliJ відкрий корінь проєкту: IDE має підхопити `pom.xml` як Maven-проєкт.
+
 ## Запуск
 
 ```powershell
